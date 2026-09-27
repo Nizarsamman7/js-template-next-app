@@ -1,0 +1,27 @@
+:root {
+  --ink: #1a1c1f;
+  --muted: #5e666e;
+  --paper: #eef1f4;
+  --signal: #c81d25;
+  --card: #ffffff;
+  --line: #d5dbe1;
+  --font-display: var(--font-barlow), Impact, sans-serif;
+  --font-body: var(--font-plex), "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); }
+a { color: inherit; text-decoration: none; }
+.topbar { background: var(--signal); color: white; text-align: center; padding: 0.4rem 1rem; font-size: 0.85rem; }
+.header, .footer { display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: 1rem 1.5rem; background: white; }
+.header { border-bottom: 1px solid var(--line); position: sticky; top: 0; }
+.logo { font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.header nav { display: flex; gap: 1rem; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 3rem 1.5rem; }
+h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.9; text-transform: uppercase; margin: 0 0 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid article, form { background: var(--card); border: 1px solid var(--line); padding: 1rem; }
+label { display: grid; gap: 0.3rem; margin-bottom: 0.75rem; }
+input, textarea, button { font: inherit; padding: 0.7rem; }
+button { background: var(--ink); color: white; border: 0; cursor: pointer; }
+.form-success { background: #fde8e8; padding: 1rem; }
+@media (max-width: 800px) { .grid, .header { grid-template-columns: 1fr; display: grid; } }
